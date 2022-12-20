@@ -1,5 +1,5 @@
 
-# GRUOPIE TRACKER
+# Groupie Tracker
 
 Groupie Trackers consists on receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information.
 
@@ -27,8 +27,7 @@ Handlers fucntions process requests. When the processing is complete, the handle
 
 
 
-## Authors
+## Author
 
-- [@Tlep](https://www.github.com)
-- [@aomashev](https://www.github.com)
+- [@Tlep](https://www.github.com)/Tlepkali
 
