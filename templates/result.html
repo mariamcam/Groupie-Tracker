@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupie Tracker</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo_and_name">
+                <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/3669/3669986.png" alt="logo" width="40" height="40"></div>
+                <div class="project_name">
+                    <h1>Groupify</h1>
+                </div>
+            </div>
+            <a href="/">
+                <div class="nav-bar">
+                    <div class="home-btn">
+                        <div class="home-icon-div"><img src="https://cdn-icons-png.flaticon.com/512/4885/4885157.png" alt="logo" width="42" height="42" ></div>
+                        <div class="home-string">
+                            <h2>Home</h2>
+                            <audio src=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div id="remaining">
+            </div>
+        </div>
+        <div class="group_res">
+            <div class="res-wrapper">
+                <div class="image_res">
+                    <img src="{{.Image}}" alt="" width="350" height="350">
+                </div>
+                <div class="info-res">
+                    <div class="name-res">
+                        <h1>{{.Name}}</h1>
+                    </div>
+                    <div class="members-res devider">
+                        <div class="members-title title-name">
+                            <h3>Members:</h3>
+                        </div>
+                        <div class="members-name ">
+                            {{range .Members}}
+                            <h3>{{.}}</h3>
+                            {{end}}
+                        </div>
+                    </div>
+                    <div class="creation-date devider">
+                        <div class="creation-title title-name">
+                            <h3>Creation Date:</h3>
+                        </div>
+                        <h3>{{.CreationDate}}</h3>
+                    </div>
+                    <div class="first-album devider">
+                        <div class="first-album-title title-name">
+                            <h3>First album:</h3>
+                        </div>
+                        <h3>{{.FirstAlbum}}</h3>
+                    </div>
+                </div>
+            </div>
+        <div class="location-dates-wrapper">
+            <div class="name-res">
+                <h2>Location and dates</h2>
+            </div>
+            {{range $key, $value := .Relation}}
+            <div class="location-dates devider">
+                <div class="location">
+                    <h3>{{$key}}:</h3>
+                </div>
+                <div class="dates">
+                    {{range $value}}
+                    <div class="date ">
+                        <h3>{{.}}</h3>
+                    </div>
+                    {{end}}
+                </div>
+            </div>
+            {{end}}
+        </div>
+           
+        </div>
+    </div>
+</body>
+</html>

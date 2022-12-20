@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupie Tracker</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo_and_name">
+                <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/3669/3669986.png" alt="logo" width="40" height="40"></div>
+                <div class="project_name">
+                    <h1>Groupify</h1>
+                </div>
+            </div>
+            <a href="/">
+                <div class="nav-bar">
+                    <div class="home-btn">
+                        <div class="home-icon-div"><img src="https://cdn-icons-png.flaticon.com/512/4885/4885157.png" alt="logo" width="42" height="42" ></div>
+                        <div class="home-string">
+                            <h2>Home</h2>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div id="remaining">
+            </div>
+        </div>
+        <div class="group_wrapper">
+            {{range .}} 
+            
+            <div class="group_img_name">
+
+                <a href="/result/?id={{.Id}}">
+                <div class="image_wrapper">
+                        <div class="vinil-and-image">
+                            <img src="./css/pngegg.png" alt="" width="240" height="240" class="vinil" >
+                            <img src="{{.Image}}" alt="" width="205" height="205" class="image">
+                        </div>
+                </div>
+                </a>
+                <div class="name">
+                    <a href="/result/?id={{.Id}}"><h3>{{.Name}}</h3></a> 
+                </div>
+            </div>
+    
+            {{end}}
+            
+        </div>
+        
+    </div>
+</body>
+</html>
+
+
