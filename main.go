@@ -28,8 +28,8 @@ type Dl struct {
 }
 
 var (
-	data, errorOfData        = TakeData()
-	dateLoc, errorOfRelation = GetRelation()
+	data, errorOfData        = RecupereDonnees()
+	dateLoc, errorOfRelation = DonneesRelation()
 )
 
 func main() {
@@ -44,7 +44,7 @@ func main() {
 }
 
 // GetRelation récupère les données de relation depuis l'API externe.
-func GetRelation() (*Dl, error) {
+func DonneesRelation() (*Dl, error) {
 	resp, err := http.Get("https://groupietrackers.herokuapp.com/api/relation")
 	if err != nil {
 		return nil, err
@@ -64,7 +64,7 @@ func GetRelation() (*Dl, error) {
 }
 
 // TakeData récupère les données d'artistes depuis l'API externe.
-func TakeData() (*[]Artists, error) {
+func RecupereDonnees() (*[]Artists, error) {
 	resp, err := http.Get("https://groupietrackers.herokuapp.com/api/artists")
 	if err != nil {
 		return nil, err
