@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
-
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
 .container {
     height: 100%;
     /* min-width: 50vw; */
@@ -14,7 +13,7 @@
     justify-content: flex-start; 
 }
 
-.header {
+.container .header {
     background-color: black;
     width: 400px;
     display: flex;
@@ -22,12 +21,7 @@
     min-height: 100vh;
 }
 
-#remaining {
-    background-color:black;
-    flex:1;
-}
-
-.logo_and_name {
+.container .logo_and_name {
     width: 300px;
     padding: 25px 30px 20px 25px;
     display: flex;
@@ -35,18 +29,18 @@
     flex-direction: row;
 }
 
-.project_name {
+.container .logo_and_name .project_name {
     padding-left: 5px;
     color: white;
 }
 
-.nav-bar {
+.container .header .nav-bar {
     display: flex; 
     justify-content: flex-start;
     align-items: center;
 }
 
-.home-btn {
+.container .header .home-btn {
     width: 340px;
     height: 64px;
     display: flex;
@@ -56,13 +50,12 @@
     padding-left: 20px;
 }
 
-
-.home-string {
+.container .header .home-btn .home-string {
     padding-left: 5px;
     color: #b2b2b2;
 }
 
-.home-icon-div {
+.container .header .home-btn .home-icon-div {
     background-color: #b2b2b2;
     display: flex; 
     justify-content:center;
@@ -72,19 +65,18 @@
     border-radius: 50%;
 }
 
-.home-btn:hover .home-string {
+.container .header .home-btn:hover .home-string {
     color: white;
     transition: 0.5s;
 }
 
-.home-btn:hover .home-icon-div {
+.container .header .home-btn:hover .home-icon-div {
     background-color: white;
     transition: 0.5s;
 }
 
-
-.group_wrapper {
-    background-color: #2b2a2a;
+.container .group_wrapper {
+    background-color: #26bba7;
     min-height: 100vh;
     min-width: 350px;
     display: flex;
@@ -93,10 +85,8 @@
     flex-wrap:wrap
 }
 
-
-
-.group_img_name {
-    background-color: #171717;
+.container .group_wrapper .group_img_name {
+    background-color: #070600;
     min-width: 150px;
     border: 1px solid #171717;
     border-radius: 15px; 
@@ -109,40 +99,37 @@
     flex-direction: column;
 }
 
-.group_img_name:hover {
+.container .group_wrapper .group_img_name:hover {
     /* transition: 0.7s; */
-    background-color: #202020;
-    
+    background-color: #beda20;
     /* border: 10px solid #202020; */
     box-shadow: 0 0 0 7px gold;
     transition: 0.2s;
 }
 
-
-
-.group_img_name:hover h3 {
+.container .group_wrapper .group_img_name:hover h3 {
     transition: 0.2s;
     background-color: rgb(209, 178, 0);
     border: 5px solid rgb(209, 178, 0);
     border-radius: 5px;
 }
 
-.vinil-and-image {
+.container .group_wrapper .group_img_name .vinil-and-image {
     display: flex; 
     justify-content:center;
     align-items: center;
 }
 
-.vinil {
+.container .group_wrapper .group_img_name .vinil {
     z-index: 1;
 }
 
-.image {
+.container .group_wrapper .group_img_name .image {
     position: absolute; 
     z-index: 2;
 }
 
-.image:hover {
+.container .group_wrapper .group_img_name .image:hover {
     opacity: 0.4;
     transition: 1s;
     border-radius: 50%;
@@ -150,37 +137,37 @@
     transform-origin:center;  /*rotate from the center*/
 }
 
-a {
+.container .group_wrapper .group_img_name a {
     text-decoration: none;
     color: white;
 }
 
-.name {
+.container .group_wrapper .group_img_name .name {
     display: flex;
     justify-content: center;
 }
 
 @keyframes rotation {
     from {
-      transform: rotate(0deg); /* start from 0 degree */
+        transform: rotate(0deg); /* start from 0 degree */
     }
     to {
-      transform: rotate(360deg) /* end at 360 degree which the same as 0 degree to create the continuous loop*/
+        transform: rotate(360deg) /* end at 360 degree which the same as 0 degree to create the continuous loop*/
     }
 }
 
-.group_res {
-    background-color: #2b2a2a;
+.container .group_res {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqBH9HgSsQ8c61jbcLa9fdwpCtHkHq06rmE7QRzzwV5RL9fDX08J7ugCOQlpAV-ysHcFo&usqp=CAU");
     width: 100vw;
     min-width: 850px;
     /* min-width: 100vw; */
     display: flex;
-    justify-content: flex-start;
+    justify-content: flexstart;
     flex-direction: column;
     align-items: center;
 }
 
-.res-wrapper {
+.container .group_res .res-wrapper {
     display: flex;
     justify-content: center;
     padding-top: 30px ;
@@ -189,8 +176,8 @@ a {
     height: 350px;
 }
 
-.info-res {
-    background-color: #202020;
+.container .group_res .info-res {
+    background-color: #214646;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -199,13 +186,13 @@ a {
     width: 500px;
 }
 
-.name-res {
+.container .group_res .info-res .name-res {
     display: flex;
     justify-content: center;
     /* padding-bottom: 10px; */
 }
 
-.devider {
+.container .group_res .info-res .devider {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -213,41 +200,40 @@ a {
     padding-left: 70px;
 }
 
-.members-name {
+.container .group_res .info-res .members-name {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
 }
 
-.title-name {
+.container .group_res .info-res .title-name {
     width: 120px;
 }
 
-.location-dates-wrapper {
-    background-color: #202020;
+.container .group_res .location-dates-wrapper {
+    background-color: #01090a;
     width: 850px;
     color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
     padding: 30px 0 15px 0;
     align-items:center;
 }
 
-.location {
+.container .group_res .location {
     width: 400px;
 }
 
-.location-dates {
+.container .group_res .location-dates {
     padding: 20px;
 }
 
-.date {
+.container .group_res .date {
     padding-bottom: 5px;
 }
 
-.error-page {
+.container .error-page {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -258,18 +244,17 @@ a {
     color: white;
 }
 
-.error-msg {
+.container .error-page .error-msg {
     padding-top: 100px;
     padding-bottom: 15px;
 }
 
-.home-button {
+.container .error-page .home-button {
     display: flex;
     justify-content: center;
     align-items: center;
-
     /* font-size: 50; */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, 'Segoe UI' , 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100px;
     height: 50px;
     border-radius: 15px; 
@@ -279,3 +264,8 @@ a {
     font-size: large;
 }
 
+.container .small-footer {
+    font-size: 10px;
+    margin: 5px 0;
+    padding: 5px;
+}

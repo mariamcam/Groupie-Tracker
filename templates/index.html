@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupie Tracker</title>
+    <title>Groupie Tracker</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="logo_and_name">
-                <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/3669/3669986.png" alt="logo" width="40" height="40"></div>
+                <div class="logo">
+                    <img src="https://img.freepik.com/photos-premium/portrait-mode-du-chat-mignon-anthropomorphe-dj-illustration-texture-granulaire_739548-2311.jpg?w=740" alt="logo" width="150" height="150">
+                </div>
                 <div class="project_name">
-                    <h1>Groupify</h1>
+                    <h1>Harmonie des Emotions Vibrantes</h1>
                 </div>
             </div>
             <a href="/">
                 <div class="nav-bar">
+                   
                     <div class="home-btn">
-                        <div class="home-icon-div"><img src="https://cdn-icons-png.flaticon.com/512/4885/4885157.png" alt="logo" width="42" height="42" ></div>
+                        
+                        <div class="home-icon-div">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4NFqtcb02HojB2cpRUNYCoOUnhW1MRe6JTri5NXyLKObRPUn90SSH_eUOm8SU6I-mAoE&usqp=CAU" alt="logo" width="45" height="45">
+                        </div>
+                        
                         <div class="home-string">
-                            <h2>Home</h2>
+                            
+                            <h3>home</h3>
                         </div>
                     </div>
                 </div>
@@ -31,28 +39,78 @@
         </div>
         <div class="group_wrapper">
             {{range .}} 
-            
             <div class="group_img_name">
-
                 <a href="/result/?id={{.Id}}">
-                <div class="image_wrapper">
+                    <div class="image_wrapper">
                         <div class="vinil-and-image">
-                            <img src="./css/pngegg.png" alt="" width="240" height="240" class="vinil" >
+                            <img src="./css/pngegg.png" alt="" width="240" height="240" class="vinil">
                             <img src="{{.Image}}" alt="" width="205" height="205" class="image">
                         </div>
-                </div>
+                    </div>
                 </a>
                 <div class="name">
                     <a href="/result/?id={{.Id}}"><h3>{{.Name}}</h3></a> 
                 </div>
             </div>
-    
             {{end}}
-            
         </div>
         
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3></h3>   
+                    </div>
+                    <div class="footer-section">    
+                    </div>
+                    <div class="footer-section">
+                        <footer class="small-footer">
+                            <div class="footer-bottom">
+                            </div>
+                            <ul>
+                                <li><a href="#">À PROPOS DE NOUS</a> 
+                                    <br>
+                                    <a href="https://www.digifemmes.com/digifemmes-academy">cliquer ici</a> 
+                                </li>
+                                <p>
+                                   
+                                   <br>
+                                    </p>
+    
+                                <li><a href="#">LIENS UTILES</a>
+                                <br>
+                                <a href="https://www.unesco.org/fr/events">Suivre unesco</a>
+                                <br>
+                                <a href="https://accesculture.org/">Acces culture</a>
+                                <br>
+                                <a href="https://linkaband.com/blog-musique/animation-musicale/quels-sites-pour-organiser-concerts">Linkaband.com</a>
+                                <br>
+                                <a href="https://www.codeur.com/blog/logiciels-billetterie-en-ligne/">codeur.com</a>
+                                <br>
+                                <a href="https://www.helloasso.com/blog/comment-organiser-un-concert/">helloasso</a>
+                                <br>
+                                <a href="https://weezevent.com/fr/concerts-spectacles/">weezevent</a>
+                                <br>
+                                <a href="https://omconcerts.be/">omconcerts</a>
+                                </li>
+                                <br>
+                                
+                                <li><a href="#">CONTACTS</a></li>
+                                <p>Adresse : 925F+9XJ, Abidjan, Tel: 05 55 34 26 26,academy@digifemmes.com</p>
+                            </ul>
+                            <br>
+                            <p>&copy; 2024 Digifemmesacademy. Tous droits réservés.</p>
+                        </div>
+
+                          </footer>
+                        
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
-
-
